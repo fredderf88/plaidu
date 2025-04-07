@@ -10,10 +10,7 @@ app.use(bodyParser.json());
 
 const port = process.env.PORT;
 
-// ➤ Test de vie
-app.get("/status", (req, res) => {
-  res.json({ status: "ok" });
-});
+
 
 // ➤ Tunnel Plaid (POST /plaid)
 app.post("/plaid", async (req, res) => {
