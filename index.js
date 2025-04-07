@@ -47,3 +47,7 @@ app.post("/plaid", async (req, res) => {
 app.listen(port, () => {
   console.log(`✅ Proxy Plaid démarré sur le port ${port}`);
 });
+
+app.get("/", (req, res) => {
+  res.send("Hello from proxy 👋");
+});
