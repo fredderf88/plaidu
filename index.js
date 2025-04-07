@@ -9,7 +9,10 @@ const app = express();
 app.use(bodyParser.json());
 
 const port = process.env.PORT;
-
+// Test simple pour vérifier si le serveur tourne
+app.get("/status", (req, res) => {
+  res.json({ status: "ok" });
+});
 
 
 // ➤ Tunnel Plaid (POST /plaid)
