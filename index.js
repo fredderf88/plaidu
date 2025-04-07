@@ -48,6 +48,6 @@ app.listen(port, () => {
   console.log(`✅ Proxy Plaid démarré sur le port ${port}`);
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello from proxy 👋");
+app.get("/status", (req, res) => {
+  res.json({ status: "ok" });
 });
